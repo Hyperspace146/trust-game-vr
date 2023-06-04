@@ -2,6 +2,7 @@ using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Microsoft.MixedReality.Toolkit.Input;
 using Microsoft.MixedReality.Toolkit;
 using Microsoft.MixedReality.Toolkit.Subsystems;
@@ -13,6 +14,7 @@ public class NetworkPlayer : MonoBehaviour
     public Transform rightHand;
 
     private PhotonView photonView;
+    private Rigidbody rb;
 
     private GameObject headRig;
     //private MixedRealityPose leftRig;
@@ -22,6 +24,8 @@ public class NetworkPlayer : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+
         handsAggregator = XRSubsystemHelpers.GetFirstRunningSubsystem<MRTKHandsAggregatorSubsystem>();
 
         photonView = GetComponent<PhotonView>();
@@ -33,6 +37,8 @@ public class NetworkPlayer : MonoBehaviour
                 item.enabled = false;
             }
         }
+
+        Camera.main.transform.parent.SetParent(head.parent, true);
     }
 
     // Update is called once per frame
@@ -66,5 +72,13 @@ public class NetworkPlayer : MonoBehaviour
                 leftHand.transform.rotation = rightHandPose.Rotation;
             }
         }
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        Debug.Log($"Thumbstick move: {context.ReadValue<Vector2>()}");
+        Vector2 stickInput = context.ReadValue<Vector2>();
+        Vector3 move = new Vector3(stickInput.x, 0, stickInput.y);
+        rb.MovePosition(stickInput);
     }
 }

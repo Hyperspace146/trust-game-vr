@@ -1,0 +1,34 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "gameplay",
+            "id": "4de64911-1833-41fc-b6bf-82067876a413",
+            "actions": [
+                {
+                    "name": "move",
+                    "type": "Value",
+                    "id": "c51322e7-6206-4708-9618-768796244fa8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d35b3478-2990-49f5-b1a7-2b30a0496d70",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
