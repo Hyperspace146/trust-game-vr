@@ -338,8 +338,6 @@ GameObject:
   - component: {fileID: 8732916421451121337}
   - component: {fileID: 9020001341315228487}
   - component: {fileID: 5252449544206195061}
-  - component: {fileID: 3171062224675870999}
-  - component: {fileID: 4422619367792882442}
   m_Layer: 3
   m_Name: Network Player
   m_TagString: Untagged
@@ -385,7 +383,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 4422619367792882442}
   - {fileID: 3378510173228748755}
   - {fileID: 5404391600336024756}
   - {fileID: 5694718525469624330}
@@ -441,38 +438,6 @@ MonoBehaviour:
   m_DefaultActionMap: gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!54 &3171062224675870999
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8170981605105266097}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 1
---- !u!114 &4422619367792882442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8170981605105266097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &9116738744462642274
 GameObject:
   m_ObjectHideFlags: 0
