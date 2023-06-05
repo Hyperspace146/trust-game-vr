@@ -27,9 +27,10 @@ public class NetworkPlayer : MonoBehaviour
     [PunRPC]
     public void SetPositionNetworked(Vector3 player1Pos, Vector3 player2Pos)
     {
-        SetPosition(player1Pos, player2Pos);
+        photonView.RPC("SetPosition", RpcTarget.All, new object[] { player1Pos, player2Pos });
     }
 
+    [PunRPC]
     private void SetPosition(Vector3 player1Pos, Vector3 player2Pos)
     {
         transform.position = photonView.Owner.ActorNumber == 1 ? player1Pos : player2Pos;
@@ -57,11 +58,11 @@ public class NetworkPlayer : MonoBehaviour
 
         // Prevent player from interacting with other player's objects
         MRTKRayInteractor[] farRayInteractors = Camera.main.transform.parent.GetComponentsInChildren<MRTKRayInteractor>();
-        string layerToIgnore = PhotonNetwork.LocalPlayer.ActorNumber == 1 ? "Player 2" : "Player 1";
-        foreach (MRTKRayInteractor farRayInteractor in farRayInteractors) 
+        string playerLayer = PhotonNetwork.LocalPlayer.ActorNumber == 1 ? "Player 1" : "Player 2";
+        foreach (MRTKRayInteractor farRayInteractor in farRayInteractors)
         {
-            farRayInteractor.raycastMask = LayerMask.NameToLayer(layerToIgnore);
-            Debug.Log($"{layerToIgnore}: Far ray interactors ignoring layer {layerToIgnore}");
+            farRayInteractor.raycastMask = LayerMask.GetMask(new string[] { playerLayer });
+            Debug.Log($"{playerLayer}: Far ray interactors colliding with layer {playerLayer}");
         }
     }
 

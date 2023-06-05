@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using cakeslice;
 
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] Transform player1SpawnPos;
     [SerializeField] Transform player2SpawnPos;
+    [SerializeField] Material transparentMaterial;
 
     private PuzzlePiece[] puzzlePieces;
 
@@ -34,11 +36,21 @@ public class PuzzleManager : MonoBehaviour
         {
             if (playerIdentity == 1)
             {
-                piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 1");
+                //piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 1");
+                if (piece.gameObject.layer == LayerMask.NameToLayer("Player 1"))
+                {
+                    Debug.Log($"Make {piece.name} transparent");
+                    piece.GetComponent<MeshRenderer>().material = transparentMaterial;
+
+                }
             }
             else
             {
-                piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 2");
+                //piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 2");
+                if (piece.gameObject.layer == LayerMask.NameToLayer("Player 2"))
+                {
+                    piece.GetComponent<MeshRenderer>().material = transparentMaterial;
+                }
             }
         }
 
