@@ -30,12 +30,22 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined a room.");
+        Debug.Log($"Joined a room. Local player's actor number: {PhotonNetwork.LocalPlayer.ActorNumber}");
         base.OnJoinedRoom();
+
+        if (PhotonNetwork.CountOfPlayers >= 1)
+        {
+            FindObjectOfType<PuzzleManager>().SetupPuzzleNetworked();
+        }
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log($"A new player named {newPlayer.NickName} joined the room.");
+        Debug.Log($"A new player with actor number {newPlayer.ActorNumber} joined the room.");
+
+        if (PhotonNetwork.CountOfPlayers >= 1)
+        {
+            FindObjectOfType<PuzzleManager>().SetupPuzzleNetworked();
+        }
     }
 }

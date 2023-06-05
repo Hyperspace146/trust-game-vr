@@ -12,6 +12,8 @@ public class NetworkPlayer : MonoBehaviour
     public Transform head;
     public Transform leftHand;
     public Transform rightHand;
+    //public Transform body;
+    //public float bodyOffset;
 
     private PhotonView photonView;
     private Rigidbody rb;
@@ -22,13 +24,27 @@ public class NetworkPlayer : MonoBehaviour
 
     private HandsAggregatorSubsystem handsAggregator;
 
-    void Start()
+    [PunRPC]
+    public void SetPositionNetworked(Vector3 player1Pos, Vector3 player2Pos)
+    {
+        SetPosition(player1Pos, player2Pos);
+    }
+
+    private void SetPosition(Vector3 player1Pos, Vector3 player2Pos)
+    {
+        transform.position = photonView.Owner.ActorNumber == 1 ? player1Pos : player2Pos;
+        Debug.Log($"Setting player {photonView.Owner.ActorNumber} position to {transform.position}");
+    }
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
-        handsAggregator = XRSubsystemHelpers.GetFirstRunningSubsystem<MRTKHandsAggregatorSubsystem>();
-
         photonView = GetComponent<PhotonView>();
+    }
+
+    void Start()
+    {
+        handsAggregator = XRSubsystemHelpers.GetFirstRunningSubsystem<MRTKHandsAggregatorSubsystem>();
         headRig = GameObject.FindWithTag("MainCamera");
         if (photonView.IsMine)
         {
@@ -36,9 +52,17 @@ public class NetworkPlayer : MonoBehaviour
             {
                 item.enabled = false;
             }
+            Camera.main.transform.parent.SetParent(head.parent, false);
         }
 
-        Camera.main.transform.parent.SetParent(head.parent, true);
+        // Prevent player from interacting with other player's objects
+        MRTKRayInteractor[] farRayInteractors = Camera.main.transform.parent.GetComponentsInChildren<MRTKRayInteractor>();
+        string layerToIgnore = PhotonNetwork.LocalPlayer.ActorNumber == 1 ? "Player 2" : "Player 1";
+        foreach (MRTKRayInteractor farRayInteractor in farRayInteractors) 
+        {
+            farRayInteractor.raycastMask = LayerMask.NameToLayer(layerToIgnore);
+            Debug.Log($"{layerToIgnore}: Far ray interactors ignoring layer {layerToIgnore}");
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +72,8 @@ public class NetworkPlayer : MonoBehaviour
         {
             head.position = headRig.transform.position;
             head.rotation = headRig.transform.rotation;
+            //body.position = head.position + Vector3.up * bodyOffset;
+
             //if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out rightRig))
             //{
             //    rightHand.transform.position = rightRig.Position;

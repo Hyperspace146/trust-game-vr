@@ -5,6 +5,9 @@ using Photon.Pun;
 
 public class PuzzleManager : MonoBehaviour
 {
+    [SerializeField] Transform player1SpawnPos;
+    [SerializeField] Transform player2SpawnPos;
+
     private PuzzlePiece[] puzzlePieces;
 
     private PhotonView photonView;
@@ -14,7 +17,39 @@ public class PuzzleManager : MonoBehaviour
         puzzlePieces = transform.GetComponentsInChildren<PuzzlePiece>();
         photonView = GetComponent<PhotonView>();
     }
-    
+
+    public void SetupPuzzleNetworked()
+    {
+        photonView.RPC("SetupPuzzle", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void SetupPuzzle()
+    {
+        Debug.Log("Setting up puzzle");
+
+        // Make pieces invisible to player that owns them
+        int playerIdentity = PhotonNetwork.LocalPlayer.ActorNumber;
+        foreach (PuzzlePiece piece in puzzlePieces)
+        {
+            if (playerIdentity == 1)
+            {
+                piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 1");
+            }
+            else
+            {
+                piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 2");
+            }
+        }
+
+        // Set player positions
+        NetworkPlayer[] players = GameObject.FindObjectsByType<NetworkPlayer>(FindObjectsSortMode.None);
+        foreach (NetworkPlayer player in players)
+        {
+            player.SetPositionNetworked(player1SpawnPos.position, player2SpawnPos.position);
+        }
+    }
+
     public void CheckIfPuzzleSolvedNetworked()
     {
         photonView.RPC("CheckIfPuzzleSolved", RpcTarget.All);

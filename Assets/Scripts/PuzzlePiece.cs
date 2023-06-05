@@ -50,7 +50,7 @@ public class PuzzlePiece : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeAll;
 
             solved = other.gameObject == pieceSolution;
-            Debug.Log($"Snap piece {name}, solved = {solved}");
+            //Debug.Log($"Snap piece {name}, solved = {solved}");
 
             puzzleManager.CheckIfPuzzleSolvedNetworked();
         }
@@ -60,7 +60,7 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (other.CompareTag("PuzzlePieceSolution"))
         {
-            Debug.Log("Unsnap");
+            //Debug.Log("Unsnap");
             currentlySnappedLocation = null;
         }
     }
@@ -73,7 +73,7 @@ public class PuzzlePiece : MonoBehaviour
     [PunRPC]
     private void UnfreezePositionAndRotation()
     {
-        Debug.Log($"Unfreeze puzzle piece {name}");
+        //Debug.Log($"Unfreeze puzzle piece {name}");
         rb.constraints = RigidbodyConstraints.None;
 
         if (currentlySnappedLocation != null)
