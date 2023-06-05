@@ -2,6 +2,7 @@ using Microsoft.MixedReality.Toolkit.SpatialManipulation;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class PuzzlePiece : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PuzzlePiece : MonoBehaviour
     [SerializeField] private Transform pieceSolutions;
 
     private Rigidbody rb;
+    private PuzzleManager puzzleManager;
+    private PhotonView photonView;
 
     private GameObject pieceSolution;
     private Quaternion pieceOrientation;
@@ -18,6 +21,8 @@ public class PuzzlePiece : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        puzzleManager = transform.parent.GetComponent<PuzzleManager>();
+        photonView = GetComponent<PhotonView>();
 
         // Find solution for this piece by looking for gameobject of
         // the same name under puzzle solutions
@@ -34,13 +39,16 @@ public class PuzzlePiece : MonoBehaviour
 
             currentlySnappedLocation = other;
 
+            // Disable trigger so other pieces can't take the slot
+            currentlySnappedLocation.enabled = false;
+
             // Freeze obj in place
             rb.constraints = RigidbodyConstraints.FreezeAll;
 
             solved = other.gameObject == pieceSolution;
             Debug.Log($"Snap piece {name}, solved = {solved}");
 
-            PuzzleManager.CheckIfPuzzleSolved();
+            puzzleManager.CheckIfPuzzleSolvedNetworked();
         }
     }
 
@@ -48,13 +56,25 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (other.CompareTag("PuzzlePieceSolution"))
         {
+            Debug.Log("Unsmap");
             currentlySnappedLocation = null;
         }
     }
 
-    public void UnfreezePositionAndRotation()
+    public void UnfreezePositionAndRotationNetworked()
+    {
+        photonView.RPC("UnfreezePositionAndRotation", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void UnfreezePositionAndRotation()
     {
         Debug.Log($"Unfreeze puzzle piece {name}");
         rb.constraints = RigidbodyConstraints.None;
+
+        if (currentlySnappedLocation != null)
+        {
+            currentlySnappedLocation.enabled = true;
+        }
     }
 }

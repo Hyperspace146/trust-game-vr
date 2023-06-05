@@ -41,6 +41,8 @@ MonoBehaviour:
   - RespawnSpaceship
   - endHoverColor
   - startHoverColor
+  - CheckIfPuzzleSolved
+  - UnfreezePositionAndRotation
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
