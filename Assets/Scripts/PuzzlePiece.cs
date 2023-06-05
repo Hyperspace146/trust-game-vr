@@ -44,7 +44,7 @@ public class PuzzlePiece : MonoBehaviour
             currentlySnappedLocation = other;
 
             // Disable trigger so other pieces can't take the slot
-            currentlySnappedLocation.enabled = false;
+            //currentlySnappedLocation.enabled = false;
 
             // Freeze obj in place
             rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -73,12 +73,12 @@ public class PuzzlePiece : MonoBehaviour
     [PunRPC]
     private void UnfreezePositionAndRotation()
     {
-        //Debug.Log($"Unfreeze puzzle piece {name}");
+        Debug.Log($"Unfreeze puzzle piece {name}");
         rb.constraints = RigidbodyConstraints.None;
 
         if (currentlySnappedLocation != null)
         {
-            currentlySnappedLocation.enabled = true;
+            //currentlySnappedLocation.enabled = true;
         }
     }
 }

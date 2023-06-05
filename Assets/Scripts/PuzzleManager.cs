@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using cakeslice;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -39,7 +38,6 @@ public class PuzzleManager : MonoBehaviour
                 //piece.GetComponent<MeshRenderer>().enabled = piece.gameObject.layer != LayerMask.NameToLayer("Player 1");
                 if (piece.gameObject.layer == LayerMask.NameToLayer("Player 1"))
                 {
-                    Debug.Log($"Make {piece.name} transparent");
                     piece.GetComponent<MeshRenderer>().material = transparentMaterial;
 
                 }

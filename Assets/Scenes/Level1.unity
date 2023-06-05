@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 3734776}
   - component: {fileID: 3734777}
   - component: {fileID: 3734779}
+  - component: {fileID: 3734780}
   m_Layer: 8
   m_Name: Plane.012 (1)
   m_TagString: PuzzlePiece
@@ -159,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3734765}
   m_LocalRotation: {x: -0.38926232, y: -0.38926193, z: -0.5903176, w: 0.59031785}
-  m_LocalPosition: {x: -5.81, y: -0.88, z: -2.55}
+  m_LocalPosition: {x: -5.81, y: -0.88, z: -1.73}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3734765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -599,6 +600,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3734767}
+  - {fileID: 3734780}
   sceneViewId: 8
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -639,12 +641,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &3734780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3734765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &50183441
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +684,7 @@ GameObject:
   - component: {fileID: 50183452}
   - component: {fileID: 50183453}
   - component: {fileID: 50183455}
+  - component: {fileID: 50183456}
   m_Layer: 8
   m_Name: Plane.009 (2)
   m_TagString: PuzzlePiece
@@ -681,7 +700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50183441}
   m_LocalRotation: {x: 0.57616895, y: 0.5761691, z: -0.40991372, w: 0.40991378}
-  m_LocalPosition: {x: -4.32, y: -0.05, z: -3.7}
+  m_LocalPosition: {x: -4.32, y: -0.05, z: -2.88}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -695,7 +714,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50183441}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -1161,12 +1180,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &50183456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50183441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &114985635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1335,7 @@ GameObject:
   - component: {fileID: 219938779}
   - component: {fileID: 219938780}
   - component: {fileID: 219938782}
+  - component: {fileID: 219938783}
   m_Layer: 9
   m_Name: Plane.006 (2)
   m_TagString: PuzzlePiece
@@ -1315,7 +1351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219938768}
   m_LocalRotation: {x: -0.45628107, y: -0.21580654, z: 0.10443707, w: 0.8569294}
-  m_LocalPosition: {x: 5.39, y: 0.04, z: -2.53}
+  m_LocalPosition: {x: 5.39, y: 0.04, z: -1.71}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1329,7 +1365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219938768}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -1795,12 +1831,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &219938783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219938768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &396275276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +1986,7 @@ GameObject:
   - component: {fileID: 421563028}
   - component: {fileID: 421563029}
   - component: {fileID: 421563031}
+  - component: {fileID: 421563032}
   m_Layer: 8
   m_Name: Plane (1)
   m_TagString: PuzzlePiece
@@ -1949,7 +2002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421563017}
   m_LocalRotation: {x: 0.1559143, y: -0.663856, z: 0.022185326, w: 0.7310908}
-  m_LocalPosition: {x: -6.84, y: 0.07, z: -4.350882}
+  m_LocalPosition: {x: -6.609, y: 0.07, z: -2.76}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1963,7 +2016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421563017}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -2389,6 +2442,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 421563019}
+  - {fileID: 421563032}
   sceneViewId: 12
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2429,12 +2483,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &421563032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421563017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &444307498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2732,7 @@ GameObject:
   - component: {fileID: 491870487}
   - component: {fileID: 491870488}
   - component: {fileID: 491870490}
+  - component: {fileID: 491870491}
   m_Layer: 9
   m_Name: Plane.002 (1)
   m_TagString: PuzzlePiece
@@ -2677,7 +2748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491870476}
   m_LocalRotation: {x: 0.12737723, y: -0.44281748, z: 0.8529316, w: 0.2453475}
-  m_LocalPosition: {x: 2.35, y: -0.87, z: -4.32}
+  m_LocalPosition: {x: 2.35, y: -0.87, z: -3.5}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2691,7 +2762,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491870476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -3157,12 +3228,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &491870491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491870476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &540255465
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,6 +3271,7 @@ GameObject:
   - component: {fileID: 540255476}
   - component: {fileID: 540255477}
   - component: {fileID: 540255479}
+  - component: {fileID: 540255480}
   m_Layer: 9
   m_Name: Plane.009 (1)
   m_TagString: PuzzlePiece
@@ -3199,7 +3287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540255465}
   m_LocalRotation: {x: 0.76793784, y: 0.5984238, z: 0.14038235, w: -0.18014795}
-  m_LocalPosition: {x: 4.39, y: -0.91, z: -4.41}
+  m_LocalPosition: {x: 4.39, y: -0.91, z: -3.59}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3213,7 +3301,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540255465}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -3679,12 +3767,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &540255480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540255465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &544789582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3768,6 +3872,7 @@ GameObject:
   - component: {fileID: 590373739}
   - component: {fileID: 590373740}
   - component: {fileID: 590373742}
+  - component: {fileID: 590373743}
   m_Layer: 8
   m_Name: Plane.001 (1)
   m_TagString: PuzzlePiece
@@ -3783,7 +3888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590373728}
   m_LocalRotation: {x: 0.6691565, y: -0, z: -0, w: 0.74312156}
-  m_LocalPosition: {x: -5.81, y: -0.89, z: -3.44}
+  m_LocalPosition: {x: -4.99, y: -0.89, z: -2.62}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3797,7 +3902,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590373728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -4263,12 +4368,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &590373743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590373728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &609233119
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,6 +4496,7 @@ GameObject:
   - component: {fileID: 611134984}
   - component: {fileID: 611134985}
   - component: {fileID: 611134987}
+  - component: {fileID: 611134988}
   m_Layer: 8
   m_Name: Plane.016 (1)
   m_TagString: PuzzlePiece
@@ -4390,7 +4512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611134973}
   m_LocalRotation: {x: 0.7110668, y: -0, z: -0, w: 0.7031246}
-  m_LocalPosition: {x: -4.81, y: -1.59, z: -2.97}
+  m_LocalPosition: {x: -4.81, y: -1.59, z: -2.15}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4404,7 +4526,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611134973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -4870,12 +4992,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &611134988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611134973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &647837716
 GameObject:
   m_ObjectHideFlags: 0
@@ -9373,9 +9511,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MRTK XR Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 7115113329451106245, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8988800969130450167, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: m_MaxRaycastDistance
-      value: 15
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
@@ -9405,6 +9547,7 @@ GameObject:
   - component: {fileID: 729056192}
   - component: {fileID: 729056193}
   - component: {fileID: 729056195}
+  - component: {fileID: 729056196}
   m_Layer: 8
   m_Name: Plane.019 (2)
   m_TagString: PuzzlePiece
@@ -9420,7 +9563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729056181}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -5.14, y: 0.82, z: -3.04}
+  m_LocalPosition: {x: -5.14, y: 0.82, z: -2.22}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9434,7 +9577,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729056181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -9900,12 +10043,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &729056196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729056181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &831351902
 GameObject:
   m_ObjectHideFlags: 0
@@ -10039,6 +10198,7 @@ GameObject:
   - component: {fileID: 870223516}
   - component: {fileID: 870223517}
   - component: {fileID: 870223519}
+  - component: {fileID: 870223520}
   m_Layer: 8
   m_Name: Plane.006 (1)
   m_TagString: PuzzlePiece
@@ -10054,7 +10214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870223505}
   m_LocalRotation: {x: 0.94989717, y: -0.15316284, z: -0.107471466, w: -0.25037253}
-  m_LocalPosition: {x: -4.03, y: -0.92, z: -2.99}
+  m_LocalPosition: {x: -4.03, y: -0.92, z: -2.17}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10068,7 +10228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870223505}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -10482,6 +10642,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 870223507}
+  - {fileID: 870223520}
   sceneViewId: 7
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -10522,12 +10683,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &870223520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870223505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &899193627
 GameObject:
   m_ObjectHideFlags: 0
@@ -10622,44 +10799,6 @@ Transform:
   m_Father: {fileID: 1881289491}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &903418723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2351505566771328562, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
-  m_PrefabInstance: {fileID: 719673857}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &903418729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903418723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a78da3f00f3328541b4526c0b0b5ec5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineThickness: 1.25
-  lineIntensity: 0.5
-  fillAmount: 0.2
-  lineColor0: {r: 0.9137255, g: 0.84808296, b: 0.36862743, a: 1}
-  lineColor1: {r: 0, g: 1, b: 0, a: 1}
-  lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  additiveRendering: 0
-  backfaceCulling: 1
-  fillColor: {r: 0, g: 0, b: 1, a: 1}
-  useFillColor: 0
-  cornerOutlines: 0
-  addLinesBetweenColors: 0
-  scaleWithScreenSize: 1
-  alphaCutoff: 0.5
-  flipY: 0
-  sourceCamera: {fileID: 0}
-  autoEnableOutlines: 0
-  outlineCamera: {fileID: 0}
-  outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 0}
-  extraRenderTexture: {fileID: 0}
 --- !u!1 &920858906
 GameObject:
   m_ObjectHideFlags: 0
@@ -10793,6 +10932,7 @@ GameObject:
   - component: {fileID: 925571336}
   - component: {fileID: 925571337}
   - component: {fileID: 925571339}
+  - component: {fileID: 925571340}
   m_Layer: 9
   m_Name: Plane.012 (2)
   m_TagString: PuzzlePiece
@@ -10808,7 +10948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925571325}
   m_LocalRotation: {x: 0.47435826, y: -0.47435766, z: 0.5243898, w: 0.52438956}
-  m_LocalPosition: {x: 3.05, y: -0.16, z: -2.5}
+  m_LocalPosition: {x: 3.05, y: -0.16, z: -1.68}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10822,7 +10962,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925571325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -11288,12 +11428,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &925571340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925571325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &956055021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11644,6 +11800,7 @@ GameObject:
   - component: {fileID: 1071590806}
   - component: {fileID: 1071590807}
   - component: {fileID: 1071590809}
+  - component: {fileID: 1071590810}
   m_Layer: 9
   m_Name: Plane.002 (3)
   m_TagString: PuzzlePiece
@@ -11659,7 +11816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071590795}
   m_LocalRotation: {x: -0.45939726, y: 0.47465876, z: -0.67111474, w: 0.33653864}
-  m_LocalPosition: {x: 1.53, y: -0.46, z: -3.3200088}
+  m_LocalPosition: {x: 1.53, y: -0.46, z: -2.5}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11673,7 +11830,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071590795}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -12139,12 +12296,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1071590810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071590795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &1104556015
 GameObject:
   m_ObjectHideFlags: 0
@@ -12637,7 +12810,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8584906, g: 0.7332643, b: 0.47378963, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12708,6 +12881,7 @@ GameObject:
   - component: {fileID: 1268193631}
   - component: {fileID: 1268193632}
   - component: {fileID: 1268193634}
+  - component: {fileID: 1268193635}
   m_Layer: 9
   m_Name: Plane.002 (2)
   m_TagString: PuzzlePiece
@@ -12723,7 +12897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268193620}
   m_LocalRotation: {x: 0.45662966, y: -0.45662975, z: 0.53989774, w: 0.5398973}
-  m_LocalPosition: {x: 2.96, y: -1.38, z: -3.5377026}
+  m_LocalPosition: {x: 2.96, y: -1.38, z: -2.72}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12737,7 +12911,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268193620}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -13163,6 +13337,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1268193622}
+  - {fileID: 1268193635}
   sceneViewId: 15
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -13203,12 +13378,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1268193635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268193620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &1273899149
 GameObject:
   m_ObjectHideFlags: 0
@@ -13230,6 +13421,7 @@ GameObject:
   - component: {fileID: 1273899160}
   - component: {fileID: 1273899161}
   - component: {fileID: 1273899163}
+  - component: {fileID: 1273899164}
   m_Layer: 8
   m_Name: Plane.007 (1)
   m_TagString: PuzzlePiece
@@ -13245,7 +13437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273899149}
   m_LocalRotation: {x: -0.21497895, y: 0.10730852, z: 0.4335276, w: 0.86851764}
-  m_LocalPosition: {x: -5.69, y: 0.09, z: -3.69}
+  m_LocalPosition: {x: -5.69, y: 0.09, z: -2.87}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13259,7 +13451,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273899149}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -13725,12 +13917,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1273899164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273899149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &1296283962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14119,7 +14327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486058322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.45, y: 0.34882486, z: -0.3874619}
+  m_LocalPosition: {x: -3.075, y: 0.34882486, z: -0.3874619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16309,7 +16517,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8584906, g: 0.7332643, b: 0.47378963, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -16365,7 +16573,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh227522
+  m_Name: pb_Mesh248796
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16656,6 +16864,7 @@ GameObject:
   - component: {fileID: 1862250569}
   - component: {fileID: 1862250570}
   - component: {fileID: 1862250572}
+  - component: {fileID: 1862250573}
   m_Layer: 9
   m_Name: Plane.019 (1)
   m_TagString: PuzzlePiece
@@ -16671,7 +16880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862250558}
   m_LocalRotation: {x: -0.10969944, y: -0.1844715, z: 0.8394779, w: -0.49921253}
-  m_LocalPosition: {x: 4.86, y: -0.93, z: -3.9}
+  m_LocalPosition: {x: 4.86, y: -0.93, z: -3.08}
   m_LocalScale: {x: 0.47440067, y: 0.47440067, z: 0.47440067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16685,7 +16894,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862250558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -17111,6 +17320,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1862250560}
+  - {fileID: 1862250573}
   sceneViewId: 13
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -17151,12 +17361,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0.9811321, g: 0.7700332, b: 0.254539, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1862250573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862250558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &1881289490
 GameObject:
   m_ObjectHideFlags: 0
