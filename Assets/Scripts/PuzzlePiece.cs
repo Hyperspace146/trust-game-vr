@@ -37,6 +37,10 @@ public class PuzzlePiece : MonoBehaviour
             transform.position = other.transform.position;
             transform.rotation = pieceOrientation;
 
+            if (currentlySnappedLocation != null)
+            {
+                currentlySnappedLocation.enabled = true;
+            }
             currentlySnappedLocation = other;
 
             // Disable trigger so other pieces can't take the slot
@@ -56,7 +60,7 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (other.CompareTag("PuzzlePieceSolution"))
         {
-            Debug.Log("Unsmap");
+            Debug.Log("Unsnap");
             currentlySnappedLocation = null;
         }
     }
